@@ -27,7 +27,7 @@ class UpdateMetadataPlugin implements SplObserver {
         # Check if the called hook is the hook you are waiting for
         # A list of all hooks is available online
         if ($subject->action == 'Photo::setTags:after' || $subject->action == 'Photo::setTags:before') {
-          error_log("Setting tags: {$subject->action}: ". print_r($subject->args, true));
+          error_log("Setting tags: {$subject->action}: ". print_r($subject, true));
           return true;
         }
 
